@@ -1,0 +1,527 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+#try{
+  background-color: transparent;
+  border: 0.1em solid black;
+  background-color: red;
+  padding: 1em;
+  margin: 1em !important;
+  border-radius: 0.5em;
+
+}
+body{
+    background-color: rgba(43, 40, 40, 0.87);
+    transition: 0.2s all;
+}
+#select{
+  background-color: transparent;
+  border: 0.1em solid black;
+  margin: 0;
+  border-radius: 0.5em;
+}
+#select option{
+  background-color: transparent;
+  color: red;
+  border: 0.1em solid black;
+  background-color: transparent;
+  border-radius: 0.5em;
+
+}
+::webkit-optio
+.timer{
+  padding: 1em;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+
+}
+.rest{
+  background-color: rgba(25, 150, 252, 0.582) !important;
+  transition: 0.2s all;
+}
+.rest-title{
+  margin-top: 0 !important;
+  transition: 0.2s all;
+}
+.light{
+  
+  background-color: rgba(255, 255, 255, 0.87) !important;
+  transition: 0.2s all;
+}
+button {
+  -webkit-text-stroke: 0%  !important;
+}
+#pomodoro-container{
+  position: relative;
+  display: inline-block;
+  padding: 1em;
+  align-self: center;
+  width: 70%;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  background-color: rgba(131, 131, 131, 0.979);
+
+}
+#clock-container{
+  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 1em;
+  align-self: center;
+  width: 70%;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  background-color: rgba(255, 67, 67, 0.712);
+  color: rgb(254, 255, 253);
+  font-weight: bold;
+  font-size: 1.5em;
+  -webkit-text-stroke: black 1.2px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#clock-title{
+  color: bisque;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  width:auto;
+  -webkit-text-stroke: 0px;
+  transition: 0.2s all;
+}
+#clock-title:hover{
+  background-color: bisque;
+  color:black;
+  border: 0.1em solid transparent;;
+  border-radius: 0.5em;
+  width:auto;
+  -webkit-text-stroke: 0px;
+  transition: 0.2s all;
+}
+.completed-task{
+  background-color: rgba(17, 11, 11, 0.527);
+  margin: 0.5em;
+  padding:  0.2em;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  color: rgba(60, 119, 11, 0.993);
+  font-family: Arial, Helvetica, sans-serif;
+}
+#completed h3{ 
+color: rgba(9, 173, 248, 0.836);
+font-weight: bold;
+font-size: 1.2em;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+}
+#progress-title{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+}
+#progress-title h3{
+  align-self: center;
+  text-align: end;
+  align-items: center;
+  justify-self: center;
+  
+  min-width: 85%;
+  margin-right:0.5em ;
+}
+#progress-title button{
+  align-self: flex-end;
+}
+
+#pom-container{
+  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 1em;
+  align-self: center;
+  width: 70%;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  background-color: rgba(255, 67, 67, 0.712);
+  color: rgb(254, 255, 253);
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0.5em;
+  -webkit-text-stroke: black 1.2px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: 0.2s all;
+
+}
+#pom-title{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em;
+  color: bisque;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  width:auto;
+  -webkit-text-stroke: 0px;
+  transition: 0.2s all;
+  overflow: hidden;
+}
+#pom-title h3{
+  
+  margin-bottom:-1em;
+}
+#pom-state{
+  color: bisque;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  width:auto;
+  margin-top: 0.7em;
+  -webkit-text-stroke: 0px;
+  transition: 0.2s all;
+}
+#pom-remaining  h3{
+   margin: 0;
+}
+#pom-remaining{
+  color: bisque;
+  display: block;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  width:auto;
+  margin-top: 0.7em;
+  font-size: 0.5em;
+  -webkit-text-stroke: 0px;
+  transition: 0.2s all;
+}
+#pom-title:hover{
+  background-color: bisque;
+  color:black;
+  border: 0.1em solid transparent;;
+  border-radius: 0.5em;
+  width:auto;
+  -webkit-text-stroke: 0px;
+  transition: 0.2s all;
+}
+#time{
+  position: relative;
+  display: inline-block;
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  padding: 0.3em 0em;
+  margin-top: 1em;
+}
+.container{
+  display:grid;
+  position: relative;
+  grid-template-areas: 
+   "p1 p2"
+   "p1 p2"
+   "p1 p2"
+  ;
+  min-height: 1em;
+  transition: 0.2s all;
+}
+#p1{
+  display: block;
+  grid-area: p1;
+  width: 100%;
+  transition: 0.2s all;
+}
+.video-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  
+  align-items: center;
+}
+
+.videoitem{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 13em;
+  height: 20em;
+  position: relative;
+  border-radius: 1em;
+
+}
+.player{
+  
+  position: relative;
+  border-radius: 1em;
+}
+.vl{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 20em;
+  max-width: 20em;
+  align-items: center;
+}
+.panel{
+  padding: 1em;
+}
+.playlist-input{
+  margin-top: 1em;
+}
+.vl li{
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  border: 0.08em solid black;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em;
+
+}
+
+::-webkit-scrollbar{
+  background-color: transparent ;
+  border: 0.08em solid black;
+  border-radius: 1em;
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgba(73, 120, 248, 0.644) ;
+  border: 0.1em solid black;
+  border-radius: 1em;
+
+}
+
+  li{
+    list-style: none;
+  }
+#p2{
+  grid-area: p2;
+  width: 100%;
+  display:flex;
+  transition: 0.2s all;
+}
+#input{
+  margin-top: 1em;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+
+}
+#todo-main{
+  
+  border: 0.08em solid black;
+  border-radius: 0.5em;
+  background-color: rgba(70, 116, 243, 0.178);
+  margin:1em ;
+}
+#progress{
+  position: relative;
+  display: block;
+  width:30%;
+  padding: 0;
+  height:3em;
+  border: 0.08em solid black;
+  border-radius: 0.35em;
+
+}#progress-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+#root{
+display: block;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+button{
+    background-color: transparent;
+    color: black;
+    margin: 1em;
+    padding: 0.2em 0.5em;
+    border: 0.08em solid black;
+    border-radius:0.5em ;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+button:hover{
+    background-color: transparent;
+    border: 0.08em solid transparent;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+input[type="checkbox"]{
+    width: 1.2rem;
+    height: 1.2rem;
+    color: dodgerblue;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    outline: 0;
+    flex-grow: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 1em;
+    transition:  300ms;
+
+    cursor: pointer;
+}
+[type=checkbox]::before {
+    content: "";
+    color: transparent;
+    display: block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    border: 0;
+    background-color: transparent;
+    background-size: contain;
+    box-shadow: inset 0 0 0 1px #CCD3D8;
+  }
+  
+
+[type=checkbox]:checked {
+    background-color: rgb(101, 255, 101);
+  }
+  input[type=text]{
+    border: 0.08em solid black;
+    border-radius:0.5em ;
+    padding: 1em;
+    background-color: transparent;
+
+  }
+  .inputcontainer{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  #play-btn{
+    margin:0.5em;
+    background-color: rgba(226, 65, 65, 0.726);
+    width: 100%;
+    transition: 0.2s all;
+  }
+  #pause-btn{
+    margin:0.5em;
+    background-color: rgba(6, 78, 160, 0.973);
+    width: 100%;
+    transition: 0.2s all;
+  }
+  #mute-btn{
+    background-color: rgba(6, 78, 160, 0.973);
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    height: 40px;
+    width: 100%;
+    transition: 0.2s all;
+  }
+  #mute-btn:hover{
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(184, 44, 44);
+    transition: 0.2s all;
+  }
+  #mute-btn img{
+    height: 30px;
+    width: 30px;
+  }
+  #exit-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin:0.5em;
+    background-color: rgba(22, 93, 173, 0.048);
+    min-width: 25%;
+    align-self: end;
+    color: rgba(247, 79, 79, 0.747);
+    transition: 0.2s all;
+  }
+  #exit-btn h2{
+    justify-content: center;
+    align-self: center;
+  }
+  #exit-btn:hover{
+    margin:0.5em;
+    color: rgb(3, 12, 24);
+    width: 20%;
+    align-self:end;
+    background-color: rgba(247, 79, 79, 0.747);
+    transition: 0.2s all;
+  }
+  #next-btn{
+    margin:0.5em;
+    align-self:start;
+    background-color: rgba(77, 247, 119, 0.973);
+    width: 100%;
+    transition: 0.2s all;
+  }
+  #extra-control{
+    display:flex;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .blur{
+    opacity: 50%;
+    filter: blur(1px);
+  }
+  #logout-btn{
+    position: absolute;
+    top:0;
+    right: 0;
+    color: rgba(212, 53, 53, 0.781);
+    border: 0.08em solid rgba(212, 53, 53, 0.781);
+  }
+  #completed-btn{
+    margin: 1em;
+  }
+  #logout-btn:hover{
+    color: white;
+    background-color: rgba(212, 53, 53, 0.781);
+    transition: 0.2s all;
+  }
+  #task-container{
+    border-radius: 1em;
+    border: 0.08em solid black;
+    margin: 0.2em;
+  }

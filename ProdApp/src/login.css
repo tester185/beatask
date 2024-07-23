@@ -1,0 +1,90 @@
+.loginall{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    background-color: rgb(42, 42, 54);
+}
+#main-cnt{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5em;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.log-input ,.log-label{
+    
+    border-radius: 1em;
+    background-color:transparent;
+}
+.log-input{
+    text-align: center;
+    padding: 1em;
+    margin: 1em;
+    border: 0.08em solid black;
+    transition: 0.2s all;
+}
+.log-input:focus{
+    background-color: rgba(240, 248, 255, 0.226);
+    transition: 0.2s all;
+}
+.log-label{
+    border-bottom: 0.08em solid black;
+    border-radius:0 ;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    padding: 0.5em ;
+    margin: 0.5em ;
+}
+#login{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    vertical-align: middle;
+    padding: 1.5em;
+    margin-top: 5em;
+    border-radius: 1em;
+    border: 0.08em solid transparent;
+    background-color: rgba(240, 248, 255, 0.226);
+    transition: 0.2s all;
+
+}
+#login:hover{
+    background-color: transparent;
+    border: 0.08em solid rgba(38, 52, 65, 0.226) ;
+    transition: 0.2s all;
+
+}
+
+#sign-btn{
+    border:none;
+    padding:0.5em 0;
+}
+#sign-notif{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 0.08em solid black;
+    border-radius: 1em;
+    height: 2em;
+    padding:2em;
+    top:110%;
+    left:1%;
+    min-width:15em ;
+    min-height: 3em;
+}
+#sign-notif h4{
+    
+    margin: 1em;
+}
