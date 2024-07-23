@@ -66,7 +66,7 @@ export default function Playlist(){
     axios.defaults.headers.common['authorization'] = localStorage.getItem('token');
   
     useLayoutEffect(()=>{
-    axios.get('https://productivityappbackend.onrender.com/getvideos')
+    axios.get('https://productivityappbackend-586f.onrender.com/getvideos')
     .then((res)=>{
       console.log("got videos")
       console.log(res.data)
@@ -90,7 +90,7 @@ export default function Playlist(){
   function addVideo(){
     if(videoinput && videoinput.length){
       console.log("sent")
-       axios.post('https://productivityappbackend.onrender.com/addvideo',{data:{link:videoinput}})
+       axios.post('https://productivityappbackend-586f.onrender.com/addvideo',{data:{link:videoinput}})
        .then((res)=>{
           setVideoinput("")
           
@@ -118,7 +118,7 @@ export default function Playlist(){
   }
   function deleteVideo(e){
     let id=(e.target.parentElement.parentElement).children[1].id
-    axios.delete('https://productivityappbackend.onrender.com/deletevideo',{data:{id:id}})
+    axios.delete('https://productivityappbackend-586f.onrender.com/deletevideo',{data:{id:id}})
     .then((res)=>{
         if(res.data.message!="error"){
             setVideos((oldvideos)=>{

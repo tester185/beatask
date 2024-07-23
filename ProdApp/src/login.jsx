@@ -32,7 +32,7 @@ export default function Login(props){
  
      }
         function login(){
-          axios.post("https://productivityappbackend.onrender.com/login",{data:{email:email,password:password}})
+          axios.post("https://productivityappbackend-586f.onrender.com/login",{data:{email:email,password:password}})
           .then((res)=>{
                console.log(res.data)
                console.log(localStorage.getItem('token'))

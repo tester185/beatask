@@ -57,7 +57,7 @@ axios.defaults.headers.common['authorization'] = localStorage.getItem('token');
     }
   }
   useEffect(()=>{
-    axios.get('https://productivityappbackend.onrender.com/task')
+    axios.get('https://productivityappbackend-586f.onrender.com/task')
     .then((res)=>{
       console.log(res.data.tasks)
      settodoItems(res.data.tasks)
@@ -67,7 +67,7 @@ axios.defaults.headers.common['authorization'] = localStorage.getItem('token');
     .finally(()=>console.log("done"))
 
     
-    axios.get('https://productivityappbackend.onrender.com/completedTasks')
+    axios.get('https://productivityappbackend-586f.onrender.com/completedTasks')
     .then((res)=>{
       console.log(res.data.tasks)
       console.log(res.data)
@@ -88,7 +88,7 @@ axios.defaults.headers.common['authorization'] = localStorage.getItem('token');
   },[lightState])
   function addTask(iteminput){
     const task={id:crypto.randomUUID(),status:false,name:iteminput}
-    axios.post('https://productivityappbackend.onrender.com/addtask',{data:{task:task}})
+    axios.post('https://productivityappbackend-586f.onrender.com/addtask',{data:{task:task}})
     .then((res)=>{
      settodoItems([...todoItems,task])
    
@@ -97,7 +97,7 @@ axios.defaults.headers.common['authorization'] = localStorage.getItem('token');
     .catch((e)=>console.log("error adding task")) }
   
   function updateTodos(id){
-    axios.post('https://productivityappbackend.onrender.com/updatetask',{data:{taskid:id}})
+    axios.post('https://productivityappbackend-586f.onrender.com/updatetask',{data:{taskid:id}})
     .then((res)=>{
       settodoItems((olditems)=>{
         return olditems.map((item)=>{
@@ -113,7 +113,7 @@ axios.defaults.headers.common['authorization'] = localStorage.getItem('token');
    
   }
   function deleteTask(DeletedItem){
-    axios.delete('https://productivityappbackend.onrender.com/task',{data:{taskid:DeletedItem.id}})
+    axios.delete('https://productivityappbackend-586f.onrender.com/task',{data:{taskid:DeletedItem.id}})
     .then((res)=>{
       settodoItems((old)=>{
        return  old.filter((item)=>{
@@ -126,7 +126,7 @@ axios.defaults.headers.common['authorization'] = localStorage.getItem('token');
    
   }
   function clearTasks(){
-    axios.post("https://productivityappbackend.onrender.com/cleartask",{data:{tasks:todoItems}})
+    axios.post("https://productivityappbackend-586f.onrender.com/cleartask",{data:{tasks:todoItems}})
     .then((res)=>{
       
     settodoItems((currentItems)=>{
@@ -168,7 +168,7 @@ axios.defaults.headers.common['authorization'] = localStorage.getItem('token');
   }
   function logout(){
     console.log(localStorage.getItem('token'))
-    axios.post('https://productivityappbackend.onrender.com/logout').then((res)=>{
+    axios.post('https://productivityappbackend-586f.onrender.com/logout').then((res)=>{
       console.log(localStorage.getItem('token'))
       if(res.data.message!="error"){
       localStorage.clear()

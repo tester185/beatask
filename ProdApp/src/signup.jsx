@@ -37,7 +37,7 @@ export default function Login(props){
  
      }
         function signup(){
-          axios.post("https://productivityappbackend.onrender.com/signup",{data:{email:email,password:password,cpassword:confirmPassword}})
+          axios.post("https://productivityappbackend-586f.onrender.com/signup",{data:{email:email,password:password,cpassword:confirmPassword}})
           .then((res)=>{
                console.log(res.data)
                if(res.data.success){

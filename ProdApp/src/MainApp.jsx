@@ -13,7 +13,7 @@ export default function MainApp(){
     axios.defaults.withCredentials=true
     axios.defaults.headers.common['authorization'] = localStorage.getItem('token');
     useLayoutEffect(()=>{
-        axios.get('https://productivityappbackend.onrender.com/getAuth')
+        axios.get('https://productivityappbackend-586f.onrender.com/getAuth')
         .then((res)=>{
             if(res.data.message!="error"){
                 setAuth(res.data.auth)
